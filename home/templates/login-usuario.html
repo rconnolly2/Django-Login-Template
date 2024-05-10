@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Log in{% endblock %}
+
+{% block content %}
+{% for msg in messages %}
+  <li class="{{ msg.tags }}">{{ msg }}</li>
+{% endfor %}
+
+<h2>Este es el login de Django 2FA</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ formulario.as_p }}
+  <button type="submit">Log In</button>
+</form>
+{% endblock content %}

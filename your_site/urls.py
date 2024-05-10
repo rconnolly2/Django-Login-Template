@@ -19,8 +19,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-    path('', include('django.contrib.auth.urls')),
+    path('', include('home.urls')), # Aquí incluyó todas las urls de aplicación home
+    # path('', include('django.contrib.auth.urls')),
     path("__debug__/", include("debug_toolbar.urls")),
 ]
 
